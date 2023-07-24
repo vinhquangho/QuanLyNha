@@ -10,6 +10,7 @@ namespace QuanLyNha.EntityFramework
     [Table("Contract")]
     public class Contract
     {
+        public int Id { get; set; }
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
         public int HomeId { get; set; }

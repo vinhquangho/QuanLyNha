@@ -60,6 +60,7 @@
     <Compile Include="EntityFramework\Area.cs" />
     <Compile Include="EntityFramework\Contract.cs" />
     <Compile Include="EntityFramework\Customer.cs" />
+    <Compile Include="EntityFramework\Global.cs" />
     <Compile Include="EntityFramework\Home.cs" />
     <Compile Include="EntityFramework\Payment.cs" />
     <Compile Include="EntityFramework\Status.cs" />
@@ -87,11 +88,18 @@
     <Compile Include="fReport.Designer.cs">
       <DependentUpon>fReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202307241331218_init-data.cs" />
+    <Compile Include="Migrations\202307241331218_init-data.designer.cs">
+      <DependentUpon>202307241331218_init-data.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307241331218_init-data.resx">
+      <DependentUpon>202307241331218_init-data.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
