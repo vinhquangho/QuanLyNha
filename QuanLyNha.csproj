@@ -55,7 +55,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityFramework\Account.cs" />
     <Compile Include="EntityFramework\AppDbContext.cs" />
+    <Compile Include="EntityFramework\Area.cs" />
+    <Compile Include="EntityFramework\Contract.cs" />
+    <Compile Include="EntityFramework\Customer.cs" />
+    <Compile Include="EntityFramework\Home.cs" />
+    <Compile Include="EntityFramework\Payment.cs" />
+    <Compile Include="EntityFramework\Status.cs" />
     <Compile Include="fAdmin.cs">
       <SubType>Form</SubType>
     </Compile>

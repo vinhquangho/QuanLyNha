@@ -13,5 +13,11 @@ namespace QuanLyNha.EntityFramework
         {
 
         }
+        public DbSet<Account> Accounts { get; set; }
+        public DbSet<Area> Areas { get; set; }
+        public DbSet<Home> Homes { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Contract> Contracts { get; set; }
+        public DbSet<Payment> Payments { get; set; }
     }
 }

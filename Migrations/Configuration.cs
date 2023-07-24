@@ -14,10 +14,23 @@
 
         protected override void Seed(QuanLyNha.EntityFramework.AppDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            context.Accounts.AddOrUpdate(x => x.Id, new EntityFramework.Account()
+            {
+                Id = 1,
+                UserName = "admin",
+                Password = "123qwe",
+                DislayName = "admin",
+                Status = EntityFramework.Status.Active
+            });
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
-            //  to avoid creating duplicate seed data.
+            context.Accounts.AddOrUpdate(x => x.Id, new EntityFramework.Account()
+            {
+                Id = 2,
+                UserName = "nv",
+                Password = "123qwe",
+                DislayName = "nv",
+                Status = EntityFramework.Status.DeActive
+            });
         }
     }
 }
