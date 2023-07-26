@@ -48,35 +48,144 @@ namespace QuanLyNha
         }
         private void LoadArea()
         {
+            var list = _dbContext.Areas.ToList();
+            dgvArea.DataSource = list;
+            dgvArea.Columns["Id"].HeaderText = "Mã";
+            dgvArea.Columns["Name"].HeaderText = "Tên";
+            dgvArea.Columns["Price"].HeaderText = "Giá";
+            dgvArea.Columns["Status"].HeaderText = "Trạng thái";
+            if (dgvArea.Columns["btnDelete"] == null)
+            {
+                DataGridViewButtonColumn btnDelete = new DataGridViewButtonColumn();
+                btnDelete.Text = "Xóa";
+                btnDelete.Name = "btnDelete";
+                btnDelete.HeaderText = string.Empty;
+                btnDelete.UseColumnTextForButtonValue = true;
+                dgvArea.Columns.Insert(4, btnDelete);
+            }
+            dgvArea.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             BindingArea();
         }
         private void LoadHome()
         {
+            var list = _dbContext.Homes.ToList();
+            dgvHome.DataSource = list;
+            dgvHome.Columns["Id"].HeaderText = "Mã";
+            dgvHome.Columns["Name"].HeaderText = "Tên";
+            dgvHome.Columns["ResidentialArea"].HeaderText = "Diện tích";
+            dgvHome.Columns["Direction"].HeaderText = "Hướng nhà";
+            dgvHome.Columns["Storey"].HeaderText = "Số tần";
+            dgvHome.Columns["Address"].HeaderText = "Địa chỉ";
+            dgvHome.Columns["Status"].HeaderText = "Trạng thái";
+            dgvHome.Columns["StatusHome"].HeaderText = "Tình trạng";
+            dgvHome.Columns["AreaId"].HeaderText = "Khu vực";
+            dgvHome.Columns["Area"].Visible = false;
+            if (dgvHome.Columns["btnDelete"] == null)
+            {
+                DataGridViewButtonColumn btnDelete = new DataGridViewButtonColumn();
+                btnDelete.Text = "Xóa";
+                btnDelete.Name = "btnDelete";
+                btnDelete.HeaderText = string.Empty;
+                btnDelete.UseColumnTextForButtonValue = true;
+                dgvHome.Columns.Insert(9, btnDelete);
+            }
+            dgvHome.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             BindingHome();
         }
         private void LoadCustomer()
         {
+            var list = _dbContext.Customers.ToList();
+            dgvCustomer.DataSource = list;
+            dgvCustomer.Columns["Id"].HeaderText = "Mã";
+            dgvCustomer.Columns["Name"].HeaderText = "Tên";
+            dgvCustomer.Columns["BrithDay"].HeaderText = "Ngày sinh";
+            dgvCustomer.Columns["CMND"].HeaderText = "CMND";
+            dgvCustomer.Columns["Phone"].HeaderText = "Số điện thoại";
+            dgvCustomer.Columns["Address"].HeaderText = "Địa chỉ";
+            dgvCustomer.Columns["Status"].HeaderText = "Trạng thái";
+            if (dgvCustomer.Columns["btnDelete"] == null)
+            {
+                DataGridViewButtonColumn btnDelete = new DataGridViewButtonColumn();
+                btnDelete.Text = "Xóa";
+                btnDelete.Name = "btnDelete";
+                btnDelete.HeaderText = string.Empty;
+                btnDelete.UseColumnTextForButtonValue = true;
+                dgvCustomer.Columns.Insert(7, btnDelete);
+            }
+            dgvCustomer.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             BindingCustomer();
         }
         private void LoadAccount()
         {
+            var list = _dbContext.Accounts.ToList();
+            dgvAccount.DataSource = list;
+            dgvAccount.Columns["Id"].HeaderText = "Mã";
+            dgvAccount.Columns["UserName"].HeaderText = "Tên đăng nhập";
+            dgvAccount.Columns["Password"].HeaderText = "Mật khẩu";
+            dgvAccount.Columns["DislayName"].HeaderText = "Tên hiển thị";
+            if (dgvAccount.Columns["btnDelete"] == null)
+            {
+                DataGridViewButtonColumn btnDelete = new DataGridViewButtonColumn();
+                btnDelete.Text = "Xóa";
+                btnDelete.Name = "btnDelete";
+                btnDelete.HeaderText = string.Empty;
+                btnDelete.UseColumnTextForButtonValue = true;
+                dgvAccount.Columns.Insert(5, btnDelete);
+            }
+            dgvAccount.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             BindingAccount();
         }
         private void BindingArea()
         {
+            txtAreaId.DataBindings.Clear();
+            txtAreaName.DataBindings.Clear();
+            txtAreaPrice.DataBindings.Clear();
 
+            txtAreaPrice.DataBindings.Add(new Binding("Text", dgvArea.DataSource, "Id", true, DataSourceUpdateMode.Never));
+            txtAreaName.DataBindings.Add(new Binding("Text", dgvArea.DataSource, "Name", true, DataSourceUpdateMode.Never));
+            txtAreaPrice.DataBindings.Add(new Binding("Value", dgvArea.DataSource, "Price", true, DataSourceUpdateMode.Never));
         }
         private void BindingHome()
         {
+            txtHomeId.DataBindings.Clear();
+            txtHomeName.DataBindings.Clear();
+            txtHomeResidentialArea.DataBindings.Clear();
+            txtHomeStorey.DataBindings.Clear();
+            txtHomeAddress.DataBindings.Clear();
 
+            txtHomeId.DataBindings.Add(new Binding("Text", dgvHome.DataSource, "Id", true, DataSourceUpdateMode.Never));
+            txtHomeName.DataBindings.Add(new Binding("Text", dgvHome.DataSource, "Name", true, DataSourceUpdateMode.Never));
+            txtHomeResidentialArea.DataBindings.Add(new Binding("Text", dgvHome.DataSource, "ResidentialArea", true, DataSourceUpdateMode.Never));
+            txtHomeStorey.DataBindings.Add(new Binding("Value", dgvHome.DataSource, "Storey", true, DataSourceUpdateMode.Never));
+            txtHomeAddress.DataBindings.Add(new Binding("Text", dgvHome.DataSource, "Address", true, DataSourceUpdateMode.Never));
         }
         private void BindingCustomer()
         {
+            txtCustomerId.DataBindings.Clear();
+            txtCustomerName.DataBindings.Clear();
+            txtCustomerBrithDay.DataBindings.Clear();
+            txtCustomerCMND.DataBindings.Clear();
+            txtCustomerPhone.DataBindings.Clear();
+            txtCustomerAddress.DataBindings.Clear();
 
+            txtCustomerId.DataBindings.Add(new Binding("Text", dgvCustomer.DataSource, "Id", true, DataSourceUpdateMode.Never));
+            txtCustomerName.DataBindings.Add(new Binding("Text", dgvCustomer.DataSource, "Name", true, DataSourceUpdateMode.Never));
+            txtCustomerBrithDay.DataBindings.Add(new Binding("Value", dgvCustomer.DataSource, "BrithDay", true, DataSourceUpdateMode.Never));
+            txtCustomerCMND.DataBindings.Add(new Binding("Text", dgvCustomer.DataSource, "CMND", true, DataSourceUpdateMode.Never));
+            txtCustomerPhone.DataBindings.Add(new Binding("Text", dgvCustomer.DataSource, "Phone", true, DataSourceUpdateMode.Never));
+            txtCustomerAddress.DataBindings.Add(new Binding("Text", dgvCustomer.DataSource, "Address", true, DataSourceUpdateMode.Never));
         }
         private void BindingAccount()
         {
+            txtAccountId.DataBindings.Clear();
+            txtAccountUserName.DataBindings.Clear();
+            txtAccountPassword.DataBindings.Clear();
+            txtAccountDisplayName.DataBindings.Clear();
 
+            txtAccountId.DataBindings.Add(new Binding("Text", dgvAccount.DataSource, "Id", true, DataSourceUpdateMode.Never));
+            txtAccountUserName.DataBindings.Add(new Binding("Text", dgvAccount.DataSource, "UserName", true, DataSourceUpdateMode.Never));
+            txtAccountPassword.DataBindings.Add(new Binding("Text", dgvAccount.DataSource, "Password", true, DataSourceUpdateMode.Never));
+            txtAccountDisplayName.DataBindings.Add(new Binding("Text", dgvAccount.DataSource, "DislayName", true, DataSourceUpdateMode.Never));
         }
         private void LoadComboboxStatus(ComboBox comboBox)
         {
