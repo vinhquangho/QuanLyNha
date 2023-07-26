@@ -92,14 +92,24 @@
     <Compile Include="Migrations\202307241331218_init-data.designer.cs">
       <DependentUpon>202307241331218_init-data.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202307260717239_update-db.cs" />
+    <Compile Include="Migrations\202307260717239_update-db.designer.cs">
+      <DependentUpon>202307260717239_update-db.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fMain.resx">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307241331218_init-data.resx">
       <DependentUpon>202307241331218_init-data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307260717239_update-db.resx">
+      <DependentUpon>202307260717239_update-db.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

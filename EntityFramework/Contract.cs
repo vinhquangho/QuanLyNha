@@ -15,6 +15,8 @@ namespace QuanLyNha.EntityFramework
         public Customer Customer { get; set; }
         public int HomeId { get; set; }
         public Home Home { get; set; }
+        public int AccountId { get; set; }
+        public Account Account { get; set; }
         public Status Status { get; set; }
     }
 }

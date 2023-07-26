@@ -14,5 +14,7 @@ namespace QuanLyNha.EntityFramework
         public decimal Price { get; set; }
         public int ContactId { get; set; }
         public Contract Contract { get; set; }
+        public int AccountId { get; set; }
+        public Account Account { get; set; }
     }
 }
