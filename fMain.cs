@@ -239,12 +239,33 @@ namespace QuanLyNha
 
         private void btnAccountAdd_Click(object sender, EventArgs e)
         {
-
+            var userName = txtAccountUserName.Text;
+            var password = txtAccountPassword.Text;
+            var displayName = txtAccountDisplayName.Text;
+            var status = (Status)txtAccountStatus.SelectedValue;
+            _dbContext.Accounts.Add(new Account() { UserName = userName, Password = password, DislayName = displayName, Status = status });
+            _dbContext.SaveChanges();
+            MessageBox.Show("Thêm thành công nhân viên!", "Thông báo", MessageBoxButtons.OK);
+            LoadAccount();
         }
 
         private void btnAccountUpdate_Click(object sender, EventArgs e)
         {
+            var id = int.Parse(txtAccountId.Text);
+            var userName = txtAccountUserName.Text;
+            var password = txtAccountPassword.Text;
+            var displayName = txtAccountDisplayName.Text;
+            var status = (Status)txtAccountStatus.SelectedValue;
 
+            var accountModel = _dbContext.Accounts.FirstOrDefault(f => f.Id == id);
+            accountModel.UserName = userName;
+            accountModel.Password = password;
+            accountModel.DislayName = displayName;
+            accountModel.Status = status;
+
+            _dbContext.SaveChanges();
+            MessageBox.Show("Cập nhật thành công tài khoản!", "Thông báo", MessageBoxButtons.OK);
+            LoadAccount();
         }
 
         private void btnCustomerAdd_Click(object sender, EventArgs e)
