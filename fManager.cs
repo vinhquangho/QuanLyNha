@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyNha
 {
-    public partial class fAdmin : Form
+    public partial class fManager : Form
     {
-        public fAdmin()
+        public fManager()
         {
             InitializeComponent();
         }

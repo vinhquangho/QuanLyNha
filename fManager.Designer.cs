@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLyNha
 {
-    partial class fAdmin
+    partial class fManager
     {
         /// <summary>
         /// Required designer variable.

@@ -44,10 +44,51 @@ namespace QuanLyNha
             this.pArea = new System.Windows.Forms.Panel();
             this.dgvArea = new System.Windows.Forms.DataGridView();
             this.tHome = new System.Windows.Forms.TabPage();
+            this.txtHomeDirection = new System.Windows.Forms.ComboBox();
+            this.txtHomeStorey = new System.Windows.Forms.NumericUpDown();
+            this.txtHomeAddress = new System.Windows.Forms.TextBox();
+            this.btnHomeUpdate = new System.Windows.Forms.Button();
+            this.btnHomeAdd = new System.Windows.Forms.Button();
+            this.txtHomeAreaId = new System.Windows.Forms.ComboBox();
+            this.txtHomeStatusHome = new System.Windows.Forms.ComboBox();
+            this.txtHomeStatus = new System.Windows.Forms.ComboBox();
+            this.txtHomeResidentialArea = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtHomeName = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtHomeId = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.pHome = new System.Windows.Forms.Panel();
             this.dgvHome = new System.Windows.Forms.DataGridView();
             this.tCustomer = new System.Windows.Forms.TabPage();
+            this.txtCustomerStatus = new System.Windows.Forms.ComboBox();
+            this.txtCustomerBrithDay = new System.Windows.Forms.DateTimePicker();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtCustomerAddress = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtCustomerPhone = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtCustomerCMND = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtCustomerName = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtCustomerId = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnCustomerUpdate = new System.Windows.Forms.Button();
+            this.btnCustomerAdd = new System.Windows.Forms.Button();
+            this.pCustomer = new System.Windows.Forms.Panel();
+            this.dgvCustomer = new System.Windows.Forms.DataGridView();
             this.tAccount = new System.Windows.Forms.TabPage();
+            this.txtAccountPassword = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtAccountUserName = new System.Windows.Forms.TextBox();
             this.btnAccountUpdate = new System.Windows.Forms.Button();
             this.btnAccountAdd = new System.Windows.Forms.Button();
             this.txtAccountStatus = new System.Windows.Forms.ComboBox();
@@ -59,62 +100,21 @@ namespace QuanLyNha
             this.label8 = new System.Windows.Forms.Label();
             this.pAccount = new System.Windows.Forms.Panel();
             this.dgvAccount = new System.Windows.Forms.DataGridView();
-            this.txtAccountUserName = new System.Windows.Forms.TextBox();
-            this.txtAccountPassword = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnCustomerUpdate = new System.Windows.Forms.Button();
-            this.btnCustomerAdd = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtHomeName = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txtHomeId = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.txtHomeResidentialArea = new System.Windows.Forms.TextBox();
-            this.txtHomeStatus = new System.Windows.Forms.ComboBox();
-            this.txtHomeStatusHome = new System.Windows.Forms.ComboBox();
-            this.txtHomeAreaId = new System.Windows.Forms.ComboBox();
-            this.btnHomeUpdate = new System.Windows.Forms.Button();
-            this.btnHomeAdd = new System.Windows.Forms.Button();
-            this.txtHomeAddress = new System.Windows.Forms.TextBox();
-            this.dgvCustomer = new System.Windows.Forms.DataGridView();
-            this.pCustomer = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtCustomerName = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtCustomerId = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtCustomerCMND = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtCustomerPhone = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtCustomerAddress = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtHomeStorey = new System.Windows.Forms.NumericUpDown();
-            this.txtHomeDirection = new System.Windows.Forms.ComboBox();
-            this.txtCustomerBrithDay = new System.Windows.Forms.DateTimePicker();
-            this.txtCustomerStatus = new System.Windows.Forms.ComboBox();
             this.tMain.SuspendLayout();
             this.tArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAreaPrice)).BeginInit();
             this.pArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArea)).BeginInit();
             this.tHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHomeStorey)).BeginInit();
             this.pHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHome)).BeginInit();
             this.tCustomer.SuspendLayout();
+            this.pCustomer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.tAccount.SuspendLayout();
             this.pAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
-            this.pCustomer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHomeStorey)).BeginInit();
             this.SuspendLayout();
             // 
             // tMain
@@ -128,6 +128,7 @@ namespace QuanLyNha
             this.tMain.SelectedIndex = 0;
             this.tMain.Size = new System.Drawing.Size(1160, 537);
             this.tMain.TabIndex = 0;
+            this.tMain.SelectedIndexChanged += new System.EventHandler(this.tMain_SelectedIndexChanged);
             // 
             // tArea
             // 
@@ -229,6 +230,7 @@ namespace QuanLyNha
             this.txtAreaId.ReadOnly = true;
             this.txtAreaId.Size = new System.Drawing.Size(184, 20);
             this.txtAreaId.TabIndex = 2;
+            this.txtAreaId.TextChanged += new System.EventHandler(this.txtAreaId_TextChanged);
             // 
             // label1
             // 
@@ -256,6 +258,8 @@ namespace QuanLyNha
             this.dgvArea.Name = "dgvArea";
             this.dgvArea.Size = new System.Drawing.Size(1140, 320);
             this.dgvArea.TabIndex = 1;
+            this.dgvArea.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArea_CellContentClick);
+            this.dgvArea.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvArea_CellFormatting);
             // 
             // tHome
             // 
@@ -288,6 +292,185 @@ namespace QuanLyNha
             this.tHome.Text = "Nhà";
             this.tHome.UseVisualStyleBackColor = true;
             // 
+            // txtHomeDirection
+            // 
+            this.txtHomeDirection.FormattingEnabled = true;
+            this.txtHomeDirection.Location = new System.Drawing.Point(509, 79);
+            this.txtHomeDirection.Name = "txtHomeDirection";
+            this.txtHomeDirection.Size = new System.Drawing.Size(184, 21);
+            this.txtHomeDirection.TabIndex = 69;
+            // 
+            // txtHomeStorey
+            // 
+            this.txtHomeStorey.Location = new System.Drawing.Point(509, 30);
+            this.txtHomeStorey.Name = "txtHomeStorey";
+            this.txtHomeStorey.Size = new System.Drawing.Size(184, 20);
+            this.txtHomeStorey.TabIndex = 68;
+            // 
+            // txtHomeAddress
+            // 
+            this.txtHomeAddress.Location = new System.Drawing.Point(509, 130);
+            this.txtHomeAddress.Name = "txtHomeAddress";
+            this.txtHomeAddress.Size = new System.Drawing.Size(184, 20);
+            this.txtHomeAddress.TabIndex = 67;
+            // 
+            // btnHomeUpdate
+            // 
+            this.btnHomeUpdate.Location = new System.Drawing.Point(1046, 101);
+            this.btnHomeUpdate.Name = "btnHomeUpdate";
+            this.btnHomeUpdate.Size = new System.Drawing.Size(100, 50);
+            this.btnHomeUpdate.TabIndex = 65;
+            this.btnHomeUpdate.Text = "Sửa";
+            this.btnHomeUpdate.UseVisualStyleBackColor = true;
+            this.btnHomeUpdate.Click += new System.EventHandler(this.btnHomeUpdate_Click);
+            // 
+            // btnHomeAdd
+            // 
+            this.btnHomeAdd.Location = new System.Drawing.Point(1046, 30);
+            this.btnHomeAdd.Name = "btnHomeAdd";
+            this.btnHomeAdd.Size = new System.Drawing.Size(100, 50);
+            this.btnHomeAdd.TabIndex = 64;
+            this.btnHomeAdd.Text = "Thêm";
+            this.btnHomeAdd.UseVisualStyleBackColor = true;
+            this.btnHomeAdd.Click += new System.EventHandler(this.btnHomeAdd_Click);
+            // 
+            // txtHomeAreaId
+            // 
+            this.txtHomeAreaId.FormattingEnabled = true;
+            this.txtHomeAreaId.Location = new System.Drawing.Point(814, 130);
+            this.txtHomeAreaId.Name = "txtHomeAreaId";
+            this.txtHomeAreaId.Size = new System.Drawing.Size(184, 21);
+            this.txtHomeAreaId.TabIndex = 63;
+            // 
+            // txtHomeStatusHome
+            // 
+            this.txtHomeStatusHome.FormattingEnabled = true;
+            this.txtHomeStatusHome.Location = new System.Drawing.Point(814, 80);
+            this.txtHomeStatusHome.Name = "txtHomeStatusHome";
+            this.txtHomeStatusHome.Size = new System.Drawing.Size(184, 21);
+            this.txtHomeStatusHome.TabIndex = 62;
+            // 
+            // txtHomeStatus
+            // 
+            this.txtHomeStatus.FormattingEnabled = true;
+            this.txtHomeStatus.Location = new System.Drawing.Point(814, 30);
+            this.txtHomeStatus.Name = "txtHomeStatus";
+            this.txtHomeStatus.Size = new System.Drawing.Size(184, 21);
+            this.txtHomeStatus.TabIndex = 61;
+            // 
+            // txtHomeResidentialArea
+            // 
+            this.txtHomeResidentialArea.Location = new System.Drawing.Point(143, 130);
+            this.txtHomeResidentialArea.Name = "txtHomeResidentialArea";
+            this.txtHomeResidentialArea.Size = new System.Drawing.Size(184, 20);
+            this.txtHomeResidentialArea.TabIndex = 60;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(731, 30);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(71, 16);
+            this.label25.TabIndex = 58;
+            this.label25.Text = "Trạng thái:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(731, 127);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(57, 16);
+            this.label21.TabIndex = 55;
+            this.label21.Text = "Khu vực:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(389, 130);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(51, 16);
+            this.label22.TabIndex = 54;
+            this.label22.Text = "Địa chỉ:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(389, 80);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(76, 16);
+            this.label23.TabIndex = 52;
+            this.label23.Text = "Hướng nhà:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(389, 30);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(74, 16);
+            this.label24.TabIndex = 50;
+            this.label24.Text = "Số tần nhà:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(731, 80);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(70, 16);
+            this.label17.TabIndex = 47;
+            this.label17.Text = "Tình trạng:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(6, 130);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(62, 16);
+            this.label18.TabIndex = 46;
+            this.label18.Text = "Diện tích:";
+            // 
+            // txtHomeName
+            // 
+            this.txtHomeName.Location = new System.Drawing.Point(143, 80);
+            this.txtHomeName.Name = "txtHomeName";
+            this.txtHomeName.Size = new System.Drawing.Size(184, 20);
+            this.txtHomeName.TabIndex = 45;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(6, 80);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(60, 16);
+            this.label19.TabIndex = 44;
+            this.label19.Text = "Tên nhà:";
+            // 
+            // txtHomeId
+            // 
+            this.txtHomeId.Location = new System.Drawing.Point(143, 30);
+            this.txtHomeId.Name = "txtHomeId";
+            this.txtHomeId.ReadOnly = true;
+            this.txtHomeId.Size = new System.Drawing.Size(184, 20);
+            this.txtHomeId.TabIndex = 43;
+            this.txtHomeId.TextChanged += new System.EventHandler(this.txtHomeId_TextChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(6, 30);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(55, 16);
+            this.label20.TabIndex = 42;
+            this.label20.Text = "Mã nhà:";
+            // 
             // pHome
             // 
             this.pHome.Controls.Add(this.dgvHome);
@@ -304,6 +487,8 @@ namespace QuanLyNha
             this.dgvHome.Name = "dgvHome";
             this.dgvHome.Size = new System.Drawing.Size(1140, 320);
             this.dgvHome.TabIndex = 1;
+            this.dgvHome.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHome_CellContentClick);
+            this.dgvHome.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvHome_CellFormatting);
             // 
             // tCustomer
             // 
@@ -331,6 +516,168 @@ namespace QuanLyNha
             this.tCustomer.Text = "Khách hàng";
             this.tCustomer.UseVisualStyleBackColor = true;
             // 
+            // txtCustomerStatus
+            // 
+            this.txtCustomerStatus.FormattingEnabled = true;
+            this.txtCustomerStatus.Location = new System.Drawing.Point(798, 80);
+            this.txtCustomerStatus.Name = "txtCustomerStatus";
+            this.txtCustomerStatus.Size = new System.Drawing.Size(184, 21);
+            this.txtCustomerStatus.TabIndex = 76;
+            // 
+            // txtCustomerBrithDay
+            // 
+            this.txtCustomerBrithDay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtCustomerBrithDay.Location = new System.Drawing.Point(143, 130);
+            this.txtCustomerBrithDay.Name = "txtCustomerBrithDay";
+            this.txtCustomerBrithDay.Size = new System.Drawing.Size(184, 20);
+            this.txtCustomerBrithDay.TabIndex = 75;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(708, 80);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(71, 16);
+            this.label15.TabIndex = 73;
+            this.label15.Text = "Trạng thái:";
+            // 
+            // txtCustomerAddress
+            // 
+            this.txtCustomerAddress.Location = new System.Drawing.Point(798, 30);
+            this.txtCustomerAddress.Name = "txtCustomerAddress";
+            this.txtCustomerAddress.Size = new System.Drawing.Size(184, 20);
+            this.txtCustomerAddress.TabIndex = 72;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(708, 30);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(51, 16);
+            this.label16.TabIndex = 71;
+            this.label16.Text = "Địa chỉ:";
+            // 
+            // txtCustomerPhone
+            // 
+            this.txtCustomerPhone.Location = new System.Drawing.Point(496, 80);
+            this.txtCustomerPhone.Name = "txtCustomerPhone";
+            this.txtCustomerPhone.Size = new System.Drawing.Size(184, 20);
+            this.txtCustomerPhone.TabIndex = 70;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(359, 80);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(86, 16);
+            this.label14.TabIndex = 69;
+            this.label14.Text = "Số điện thoại";
+            // 
+            // txtCustomerCMND
+            // 
+            this.txtCustomerCMND.Location = new System.Drawing.Point(496, 30);
+            this.txtCustomerCMND.Name = "txtCustomerCMND";
+            this.txtCustomerCMND.Size = new System.Drawing.Size(184, 20);
+            this.txtCustomerCMND.TabIndex = 68;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(359, 30);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(51, 16);
+            this.label13.TabIndex = 67;
+            this.label13.Text = "CMND:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(6, 130);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 16);
+            this.label10.TabIndex = 65;
+            this.label10.Text = "Ngày sinh:";
+            // 
+            // txtCustomerName
+            // 
+            this.txtCustomerName.Location = new System.Drawing.Point(143, 80);
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.Size = new System.Drawing.Size(184, 20);
+            this.txtCustomerName.TabIndex = 64;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(6, 80);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(107, 16);
+            this.label11.TabIndex = 63;
+            this.label11.Text = "Tên khách hàng:";
+            // 
+            // txtCustomerId
+            // 
+            this.txtCustomerId.Location = new System.Drawing.Point(143, 30);
+            this.txtCustomerId.Name = "txtCustomerId";
+            this.txtCustomerId.ReadOnly = true;
+            this.txtCustomerId.Size = new System.Drawing.Size(184, 20);
+            this.txtCustomerId.TabIndex = 62;
+            this.txtCustomerId.TextChanged += new System.EventHandler(this.txtCustomerId_TextChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(6, 30);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(102, 16);
+            this.label12.TabIndex = 61;
+            this.label12.Text = "Mã khách hàng:";
+            // 
+            // btnCustomerUpdate
+            // 
+            this.btnCustomerUpdate.Location = new System.Drawing.Point(1046, 96);
+            this.btnCustomerUpdate.Name = "btnCustomerUpdate";
+            this.btnCustomerUpdate.Size = new System.Drawing.Size(100, 50);
+            this.btnCustomerUpdate.TabIndex = 33;
+            this.btnCustomerUpdate.Text = "Sửa";
+            this.btnCustomerUpdate.UseVisualStyleBackColor = true;
+            this.btnCustomerUpdate.Click += new System.EventHandler(this.btnCustomerUpdate_Click);
+            // 
+            // btnCustomerAdd
+            // 
+            this.btnCustomerAdd.Location = new System.Drawing.Point(1046, 30);
+            this.btnCustomerAdd.Name = "btnCustomerAdd";
+            this.btnCustomerAdd.Size = new System.Drawing.Size(100, 50);
+            this.btnCustomerAdd.TabIndex = 32;
+            this.btnCustomerAdd.Text = "Thêm";
+            this.btnCustomerAdd.UseVisualStyleBackColor = true;
+            this.btnCustomerAdd.Click += new System.EventHandler(this.btnCustomerAdd_Click);
+            // 
+            // pCustomer
+            // 
+            this.pCustomer.Controls.Add(this.dgvCustomer);
+            this.pCustomer.Location = new System.Drawing.Point(6, 185);
+            this.pCustomer.Name = "pCustomer";
+            this.pCustomer.Size = new System.Drawing.Size(1140, 320);
+            this.pCustomer.TabIndex = 2;
+            // 
+            // dgvCustomer
+            // 
+            this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCustomer.Location = new System.Drawing.Point(0, 0);
+            this.dgvCustomer.Name = "dgvCustomer";
+            this.dgvCustomer.Size = new System.Drawing.Size(1140, 320);
+            this.dgvCustomer.TabIndex = 1;
+            this.dgvCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellContentClick);
+            this.dgvCustomer.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvCustomer_CellFormatting);
+            // 
             // tAccount
             // 
             this.tAccount.Controls.Add(this.txtAccountPassword);
@@ -353,6 +700,30 @@ namespace QuanLyNha
             this.tAccount.TabIndex = 3;
             this.tAccount.Text = "Tài khoản";
             this.tAccount.UseVisualStyleBackColor = true;
+            // 
+            // txtAccountPassword
+            // 
+            this.txtAccountPassword.Location = new System.Drawing.Point(548, 82);
+            this.txtAccountPassword.Name = "txtAccountPassword";
+            this.txtAccountPassword.Size = new System.Drawing.Size(184, 20);
+            this.txtAccountPassword.TabIndex = 24;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(438, 83);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 16);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Mật khẩu:";
+            // 
+            // txtAccountUserName
+            // 
+            this.txtAccountUserName.Location = new System.Drawing.Point(548, 31);
+            this.txtAccountUserName.Name = "txtAccountUserName";
+            this.txtAccountUserName.Size = new System.Drawing.Size(184, 20);
+            this.txtAccountUserName.TabIndex = 22;
             // 
             // btnAccountUpdate
             // 
@@ -426,6 +797,7 @@ namespace QuanLyNha
             this.txtAccountId.ReadOnly = true;
             this.txtAccountId.Size = new System.Drawing.Size(184, 20);
             this.txtAccountId.TabIndex = 13;
+            this.txtAccountId.TextChanged += new System.EventHandler(this.txtAccountId_TextChanged);
             // 
             // label8
             // 
@@ -453,366 +825,8 @@ namespace QuanLyNha
             this.dgvAccount.Name = "dgvAccount";
             this.dgvAccount.Size = new System.Drawing.Size(1140, 320);
             this.dgvAccount.TabIndex = 0;
-            // 
-            // txtAccountUserName
-            // 
-            this.txtAccountUserName.Location = new System.Drawing.Point(548, 31);
-            this.txtAccountUserName.Name = "txtAccountUserName";
-            this.txtAccountUserName.Size = new System.Drawing.Size(184, 20);
-            this.txtAccountUserName.TabIndex = 22;
-            // 
-            // txtAccountPassword
-            // 
-            this.txtAccountPassword.Location = new System.Drawing.Point(548, 82);
-            this.txtAccountPassword.Name = "txtAccountPassword";
-            this.txtAccountPassword.Size = new System.Drawing.Size(184, 20);
-            this.txtAccountPassword.TabIndex = 24;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(438, 83);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 16);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "Mật khẩu:";
-            // 
-            // btnCustomerUpdate
-            // 
-            this.btnCustomerUpdate.Location = new System.Drawing.Point(1046, 96);
-            this.btnCustomerUpdate.Name = "btnCustomerUpdate";
-            this.btnCustomerUpdate.Size = new System.Drawing.Size(100, 50);
-            this.btnCustomerUpdate.TabIndex = 33;
-            this.btnCustomerUpdate.Text = "Sửa";
-            this.btnCustomerUpdate.UseVisualStyleBackColor = true;
-            this.btnCustomerUpdate.Click += new System.EventHandler(this.btnCustomerUpdate_Click);
-            // 
-            // btnCustomerAdd
-            // 
-            this.btnCustomerAdd.Location = new System.Drawing.Point(1046, 30);
-            this.btnCustomerAdd.Name = "btnCustomerAdd";
-            this.btnCustomerAdd.Size = new System.Drawing.Size(100, 50);
-            this.btnCustomerAdd.TabIndex = 32;
-            this.btnCustomerAdd.Text = "Thêm";
-            this.btnCustomerAdd.UseVisualStyleBackColor = true;
-            this.btnCustomerAdd.Click += new System.EventHandler(this.btnCustomerAdd_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(731, 80);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(70, 16);
-            this.label17.TabIndex = 47;
-            this.label17.Text = "Tình trạng:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(6, 130);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(62, 16);
-            this.label18.TabIndex = 46;
-            this.label18.Text = "Diện tích:";
-            // 
-            // txtHomeName
-            // 
-            this.txtHomeName.Location = new System.Drawing.Point(143, 80);
-            this.txtHomeName.Name = "txtHomeName";
-            this.txtHomeName.Size = new System.Drawing.Size(184, 20);
-            this.txtHomeName.TabIndex = 45;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(6, 80);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(60, 16);
-            this.label19.TabIndex = 44;
-            this.label19.Text = "Tên nhà:";
-            // 
-            // txtHomeId
-            // 
-            this.txtHomeId.Location = new System.Drawing.Point(143, 30);
-            this.txtHomeId.Name = "txtHomeId";
-            this.txtHomeId.ReadOnly = true;
-            this.txtHomeId.Size = new System.Drawing.Size(184, 20);
-            this.txtHomeId.TabIndex = 43;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(6, 30);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(55, 16);
-            this.label20.TabIndex = 42;
-            this.label20.Text = "Mã nhà:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(731, 127);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(57, 16);
-            this.label21.TabIndex = 55;
-            this.label21.Text = "Khu vực:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(389, 130);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(51, 16);
-            this.label22.TabIndex = 54;
-            this.label22.Text = "Địa chỉ:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(389, 80);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(76, 16);
-            this.label23.TabIndex = 52;
-            this.label23.Text = "Hướng nhà:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(389, 30);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(74, 16);
-            this.label24.TabIndex = 50;
-            this.label24.Text = "Số tần nhà:";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(731, 30);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(71, 16);
-            this.label25.TabIndex = 58;
-            this.label25.Text = "Trạng thái:";
-            // 
-            // txtHomeResidentialArea
-            // 
-            this.txtHomeResidentialArea.Location = new System.Drawing.Point(143, 130);
-            this.txtHomeResidentialArea.Name = "txtHomeResidentialArea";
-            this.txtHomeResidentialArea.Size = new System.Drawing.Size(184, 20);
-            this.txtHomeResidentialArea.TabIndex = 60;
-            // 
-            // txtHomeStatus
-            // 
-            this.txtHomeStatus.FormattingEnabled = true;
-            this.txtHomeStatus.Location = new System.Drawing.Point(814, 30);
-            this.txtHomeStatus.Name = "txtHomeStatus";
-            this.txtHomeStatus.Size = new System.Drawing.Size(184, 21);
-            this.txtHomeStatus.TabIndex = 61;
-            // 
-            // txtHomeStatusHome
-            // 
-            this.txtHomeStatusHome.FormattingEnabled = true;
-            this.txtHomeStatusHome.Location = new System.Drawing.Point(814, 80);
-            this.txtHomeStatusHome.Name = "txtHomeStatusHome";
-            this.txtHomeStatusHome.Size = new System.Drawing.Size(184, 21);
-            this.txtHomeStatusHome.TabIndex = 62;
-            // 
-            // txtHomeAreaId
-            // 
-            this.txtHomeAreaId.FormattingEnabled = true;
-            this.txtHomeAreaId.Location = new System.Drawing.Point(814, 130);
-            this.txtHomeAreaId.Name = "txtHomeAreaId";
-            this.txtHomeAreaId.Size = new System.Drawing.Size(184, 21);
-            this.txtHomeAreaId.TabIndex = 63;
-            // 
-            // btnHomeUpdate
-            // 
-            this.btnHomeUpdate.Location = new System.Drawing.Point(1046, 101);
-            this.btnHomeUpdate.Name = "btnHomeUpdate";
-            this.btnHomeUpdate.Size = new System.Drawing.Size(100, 50);
-            this.btnHomeUpdate.TabIndex = 65;
-            this.btnHomeUpdate.Text = "Sửa";
-            this.btnHomeUpdate.UseVisualStyleBackColor = true;
-            this.btnHomeUpdate.Click += new System.EventHandler(this.btnHomeUpdate_Click);
-            // 
-            // btnHomeAdd
-            // 
-            this.btnHomeAdd.Location = new System.Drawing.Point(1046, 30);
-            this.btnHomeAdd.Name = "btnHomeAdd";
-            this.btnHomeAdd.Size = new System.Drawing.Size(100, 50);
-            this.btnHomeAdd.TabIndex = 64;
-            this.btnHomeAdd.Text = "Thêm";
-            this.btnHomeAdd.UseVisualStyleBackColor = true;
-            this.btnHomeAdd.Click += new System.EventHandler(this.btnHomeAdd_Click);
-            // 
-            // txtHomeAddress
-            // 
-            this.txtHomeAddress.Location = new System.Drawing.Point(509, 130);
-            this.txtHomeAddress.Name = "txtHomeAddress";
-            this.txtHomeAddress.Size = new System.Drawing.Size(184, 20);
-            this.txtHomeAddress.TabIndex = 67;
-            // 
-            // dgvCustomer
-            // 
-            this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCustomer.Location = new System.Drawing.Point(0, 0);
-            this.dgvCustomer.Name = "dgvCustomer";
-            this.dgvCustomer.Size = new System.Drawing.Size(1140, 320);
-            this.dgvCustomer.TabIndex = 1;
-            // 
-            // pCustomer
-            // 
-            this.pCustomer.Controls.Add(this.dgvCustomer);
-            this.pCustomer.Location = new System.Drawing.Point(6, 185);
-            this.pCustomer.Name = "pCustomer";
-            this.pCustomer.Size = new System.Drawing.Size(1140, 320);
-            this.pCustomer.TabIndex = 2;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 130);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 16);
-            this.label10.TabIndex = 65;
-            this.label10.Text = "Ngày sinh:";
-            // 
-            // txtCustomerName
-            // 
-            this.txtCustomerName.Location = new System.Drawing.Point(143, 80);
-            this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(184, 20);
-            this.txtCustomerName.TabIndex = 64;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 80);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(107, 16);
-            this.label11.TabIndex = 63;
-            this.label11.Text = "Tên khách hàng:";
-            // 
-            // txtCustomerId
-            // 
-            this.txtCustomerId.Location = new System.Drawing.Point(143, 30);
-            this.txtCustomerId.Name = "txtCustomerId";
-            this.txtCustomerId.ReadOnly = true;
-            this.txtCustomerId.Size = new System.Drawing.Size(184, 20);
-            this.txtCustomerId.TabIndex = 62;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 30);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(102, 16);
-            this.label12.TabIndex = 61;
-            this.label12.Text = "Mã khách hàng:";
-            // 
-            // txtCustomerCMND
-            // 
-            this.txtCustomerCMND.Location = new System.Drawing.Point(496, 30);
-            this.txtCustomerCMND.Name = "txtCustomerCMND";
-            this.txtCustomerCMND.Size = new System.Drawing.Size(184, 20);
-            this.txtCustomerCMND.TabIndex = 68;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(359, 30);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(51, 16);
-            this.label13.TabIndex = 67;
-            this.label13.Text = "CMND:";
-            // 
-            // txtCustomerPhone
-            // 
-            this.txtCustomerPhone.Location = new System.Drawing.Point(496, 80);
-            this.txtCustomerPhone.Name = "txtCustomerPhone";
-            this.txtCustomerPhone.Size = new System.Drawing.Size(184, 20);
-            this.txtCustomerPhone.TabIndex = 70;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(359, 80);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(86, 16);
-            this.label14.TabIndex = 69;
-            this.label14.Text = "Số điện thoại";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(708, 80);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(71, 16);
-            this.label15.TabIndex = 73;
-            this.label15.Text = "Trạng thái:";
-            // 
-            // txtCustomerAddress
-            // 
-            this.txtCustomerAddress.Location = new System.Drawing.Point(798, 30);
-            this.txtCustomerAddress.Name = "txtCustomerAddress";
-            this.txtCustomerAddress.Size = new System.Drawing.Size(184, 20);
-            this.txtCustomerAddress.TabIndex = 72;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(708, 30);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(51, 16);
-            this.label16.TabIndex = 71;
-            this.label16.Text = "Địa chỉ:";
-            // 
-            // txtHomeStorey
-            // 
-            this.txtHomeStorey.Location = new System.Drawing.Point(509, 30);
-            this.txtHomeStorey.Name = "txtHomeStorey";
-            this.txtHomeStorey.Size = new System.Drawing.Size(184, 20);
-            this.txtHomeStorey.TabIndex = 68;
-            // 
-            // txtHomeDirection
-            // 
-            this.txtHomeDirection.FormattingEnabled = true;
-            this.txtHomeDirection.Location = new System.Drawing.Point(509, 79);
-            this.txtHomeDirection.Name = "txtHomeDirection";
-            this.txtHomeDirection.Size = new System.Drawing.Size(184, 21);
-            this.txtHomeDirection.TabIndex = 69;
-            // 
-            // txtCustomerBrithDay
-            // 
-            this.txtCustomerBrithDay.Location = new System.Drawing.Point(143, 130);
-            this.txtCustomerBrithDay.Name = "txtCustomerBrithDay";
-            this.txtCustomerBrithDay.Size = new System.Drawing.Size(184, 20);
-            this.txtCustomerBrithDay.TabIndex = 75;
-            // 
-            // txtCustomerStatus
-            // 
-            this.txtCustomerStatus.FormattingEnabled = true;
-            this.txtCustomerStatus.Location = new System.Drawing.Point(798, 80);
-            this.txtCustomerStatus.Name = "txtCustomerStatus";
-            this.txtCustomerStatus.Size = new System.Drawing.Size(184, 21);
-            this.txtCustomerStatus.TabIndex = 76;
+            this.dgvAccount.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_CellContentClick);
+            this.dgvAccount.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAccount_CellFormatting);
             // 
             // fMain
             // 
@@ -823,6 +837,7 @@ namespace QuanLyNha
             this.Name = "fMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fMain";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fMain_FormClosed);
             this.tMain.ResumeLayout(false);
             this.tArea.ResumeLayout(false);
             this.tArea.PerformLayout();
@@ -831,17 +846,17 @@ namespace QuanLyNha
             ((System.ComponentModel.ISupportInitialize)(this.dgvArea)).EndInit();
             this.tHome.ResumeLayout(false);
             this.tHome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHomeStorey)).EndInit();
             this.pHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHome)).EndInit();
             this.tCustomer.ResumeLayout(false);
             this.tCustomer.PerformLayout();
+            this.pCustomer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
             this.tAccount.ResumeLayout(false);
             this.tAccount.PerformLayout();
             this.pAccount.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
-            this.pCustomer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtHomeStorey)).EndInit();
             this.ResumeLayout(false);
 
         }

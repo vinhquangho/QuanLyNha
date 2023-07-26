@@ -15,4 +15,9 @@ namespace QuanLyNha.EntityFramework
             set { _AccountId = value; }
         }
     }
+    public class Select
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
 }

@@ -64,11 +64,11 @@
     <Compile Include="EntityFramework\Home.cs" />
     <Compile Include="EntityFramework\Payment.cs" />
     <Compile Include="EntityFramework\Status.cs" />
-    <Compile Include="fAdmin.cs">
+    <Compile Include="fManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fAdmin.Designer.cs">
-      <DependentUpon>fAdmin.cs</DependentUpon>
+    <Compile Include="fManager.Designer.cs">
+      <DependentUpon>fManager.cs</DependentUpon>
     </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
