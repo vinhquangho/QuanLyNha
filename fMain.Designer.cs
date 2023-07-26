@@ -192,6 +192,11 @@ namespace QuanLyNha
             // txtAreaPrice
             // 
             this.txtAreaPrice.Location = new System.Drawing.Point(510, 30);
+            this.txtAreaPrice.Maximum = new decimal(new int[] {
+            1316134911,
+            2328,
+            0,
+            0});
             this.txtAreaPrice.Name = "txtAreaPrice";
             this.txtAreaPrice.Size = new System.Drawing.Size(184, 20);
             this.txtAreaPrice.TabIndex = 6;

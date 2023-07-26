@@ -141,7 +141,7 @@ namespace QuanLyNha
             txtAreaName.DataBindings.Clear();
             txtAreaPrice.DataBindings.Clear();
 
-            txtAreaPrice.DataBindings.Add(new Binding("Text", dgvArea.DataSource, "Id", true, DataSourceUpdateMode.Never));
+            txtAreaId.DataBindings.Add(new Binding("Text", dgvArea.DataSource, "Id", true, DataSourceUpdateMode.Never));
             txtAreaName.DataBindings.Add(new Binding("Text", dgvArea.DataSource, "Name", true, DataSourceUpdateMode.Never));
             txtAreaPrice.DataBindings.Add(new Binding("Value", dgvArea.DataSource, "Price", true, DataSourceUpdateMode.Never));
         }
@@ -209,12 +209,32 @@ namespace QuanLyNha
 
         private void btnAddArea_Click(object sender, EventArgs e)
         {
-
+            var name = txtAreaName.Text;
+            var price = txtAreaPrice.Value;
+            var status = (Status)txtAreaStatus.SelectedValue;
+            _dbContext.Areas.Add(new Area() { Name = name, Price = price, Status = status });
+            _dbContext.SaveChanges();
+            MessageBox.Show("Thêm thành công khu vực !", "Thông báo", MessageBoxButtons.OK);
+            LoadArea();
+            LoadComboboxArea();
         }
 
         private void btnUpdateArea_Click(object sender, EventArgs e)
         {
+            var id = int.Parse(txtAreaId.Text);
+            var name = txtAreaName.Text;
+            var price = txtAreaPrice.Value;
+            var status = (Status)txtAreaStatus.SelectedValue;
 
+            var model = _dbContext.Areas.FirstOrDefault(f => f.Id == id);
+            model.Name = name;
+            model.Price = price;
+            model.Status = status;
+
+            _dbContext.SaveChanges();
+            MessageBox.Show("Cập nhật thành công khu vực !", "Thông báo", MessageBoxButtons.OK);
+            LoadArea();
+            LoadComboboxArea();
         }
 
         private void btnAccountAdd_Click(object sender, EventArgs e)
