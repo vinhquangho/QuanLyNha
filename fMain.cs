@@ -24,6 +24,7 @@ namespace QuanLyNha
             LoadComboboxStatus(txtCustomerStatus);
             LoadComboboxStatus(txtAccountStatus);
             LoadComboboxHomeStatus();
+            LoadComboboxHomeDirection();
             LoadComboboxArea();
             LoadArea();
             LoadHome();
@@ -44,6 +45,20 @@ namespace QuanLyNha
             {
                 new Select(){ Id = 1 , Name = "Đã cho thuê" },
                 new Select(){ Id = 2, Name = "Chưa cho thuê" }
+            };
+        }
+        private List<Select> GetDirectionHome()
+        {
+            return new List<Select>()
+            {
+                new Select(){ Id = 0, Name = "Hướng Bắc" },
+                new Select(){ Id = 1, Name = "Hướng Đông" },
+                new Select(){ Id = 2, Name = "Hướng Nam" },
+                new Select(){ Id = 3, Name = "Hướng Tây" },
+                new Select(){ Id = 4, Name = "Hướng Đông Bắc" },
+                new Select(){ Id = 5, Name = "Hướng Đông Nam" },
+                new Select(){ Id = 6, Name = "Hướng Tây Bắc" },
+                new Select(){ Id = 7, Name = "Hướng Tây Nam" },
             };
         }
         private void LoadArea()
@@ -199,6 +214,12 @@ namespace QuanLyNha
             txtHomeStatusHome.DisplayMember = "Name";
             txtHomeStatusHome.ValueMember = "Id";
         }
+        private void LoadComboboxHomeDirection()
+        {
+            txtHomeDirection.DataSource = GetDirectionHome();
+            txtHomeDirection.DisplayMember = "Name";
+            txtHomeDirection.ValueMember = "Id";
+        }
         private void LoadComboboxArea()
         {
             var list = _dbContext.Areas.ToList();
@@ -270,22 +291,84 @@ namespace QuanLyNha
 
         private void btnCustomerAdd_Click(object sender, EventArgs e)
         {
+            var name = txtCustomerName.Text;
+            var brithDay = txtCustomerBrithDay.Value;
+            var cmnd = txtCustomerCMND.Text;
+            var phone = txtCustomerPhone.Text;
+            var address = txtCustomerAddress.Text;
+            var status = (Status)txtCustomerStatus.SelectedValue;
 
+            _dbContext.Customers.Add(new Customer() { Name = name, BrithDay = brithDay, CMND = cmnd, Phone = phone, Address = address, Status = status });
+            _dbContext.SaveChanges();
+            MessageBox.Show("Thêm thành công khách hàng!", "Thông báo", MessageBoxButtons.OK);
+            LoadCustomer();
         }
 
         private void btnCustomerUpdate_Click(object sender, EventArgs e)
         {
+            var id = int.Parse(txtCustomerId.Text);
+            var name = txtCustomerName.Text;
+            var brithDay = txtCustomerBrithDay.Value;
+            var cmnd = txtCustomerCMND.Text;
+            var phone = txtCustomerPhone.Text;
+            var address = txtCustomerAddress.Text;
+            var status = (Status)txtCustomerStatus.SelectedValue;
 
+            var customerModel = _dbContext.Customers.FirstOrDefault(f => f.Id == id);
+            customerModel.Name = name;
+            customerModel.BrithDay = brithDay;
+            customerModel.CMND = cmnd;
+            customerModel.Phone = phone;
+            customerModel.Address = address;
+            customerModel.Status = status;
+
+            _dbContext.SaveChanges();
+            MessageBox.Show("Cập nhật thành công kháchh hàng!", "Thông báo", MessageBoxButtons.OK);
+            LoadCustomer();
         }
 
         private void btnHomeAdd_Click(object sender, EventArgs e)
         {
+            var name = txtHomeName.Text;
+            var residentialArea = txtHomeResidentialArea.Text;
+            var direction = (Direction)txtHomeDirection.SelectedValue;
+            var storey = int.Parse(txtHomeStorey.Value.ToString());
+            var address = txtHomeAddress.Text;
+            var status = (Status)txtHomeStatus.SelectedValue;
+            var statusHome = (StatusHome)txtHomeStatusHome.SelectedValue;
+            var areaId = (int)txtHomeAreaId.SelectedValue;
 
+            _dbContext.Homes.Add(new Home() { Name = name, ResidentialArea = residentialArea, Direction = direction, Storey = storey, Address = address, Status = status, StatusHome = statusHome, AreaId = areaId });
+            _dbContext.SaveChanges();
+            MessageBox.Show("Thêm thành công nhà thuê!", "Thông báo", MessageBoxButtons.OK);
+            LoadHome();
         }
 
         private void btnHomeUpdate_Click(object sender, EventArgs e)
         {
+            var id = int.Parse(txtHomeId.Text);
+            var name = txtHomeName.Text;
+            var residentialArea = txtHomeResidentialArea.Text;
+            var direction = (Direction)txtHomeDirection.SelectedValue;
+            var storey = int.Parse(txtHomeStorey.Value.ToString());
+            var address = txtHomeAddress.Text;
+            var status = (Status)txtHomeStatus.SelectedValue;
+            var statusHome = (StatusHome)txtHomeStatusHome.SelectedValue;
+            var areaId = (int)txtHomeAreaId.SelectedValue;
 
+            var homeModel = _dbContext.Homes.FirstOrDefault(f => f.Id == id);
+            homeModel.Name = name;
+            homeModel.ResidentialArea = residentialArea;
+            homeModel.Direction = direction;
+            homeModel.Storey = storey;
+            homeModel.Address = address;
+            homeModel.Status = status;
+            homeModel.StatusHome = statusHome;
+            homeModel.AreaId = areaId;
+
+            _dbContext.SaveChanges();
+            MessageBox.Show("Cập nhật thành công nhà thuê!", "Thông báo", MessageBoxButtons.OK);
+            LoadHome();
         }
 
         private void txtAreaId_TextChanged(object sender, EventArgs e)
@@ -311,6 +394,18 @@ namespace QuanLyNha
                     int id = (int)dgvHome.SelectedCells[0].OwningRow.Cells["Status"].Value;
                     var index = GetSatus().FindIndex(x => x.Id == id);
                     txtHomeStatus.SelectedIndex = index;
+
+                    var idHomeStatus = (int)dgvHome.SelectedCells[0].OwningRow.Cells["StatusHome"].Value;
+                    var indexHomeStatus = GetStatusHome().FindIndex(x => x.Id == idHomeStatus);
+                    txtHomeStatusHome.SelectedIndex = indexHomeStatus;
+
+                    var idHomeDirection = (int)dgvHome.SelectedCells[0].OwningRow.Cells["Direction"].Value;
+                    var indexHomeDirection = GetDirectionHome().FindIndex(x => x.Id == idHomeDirection);
+                    txtHomeDirection.SelectedIndex = indexHomeDirection;
+
+                    var areaId = (int)dgvHome.SelectedCells[0].OwningRow.Cells["AreaId"].Value;
+                    var areaIndex = _dbContext.Areas.ToList().FindIndex(f => f.Id == areaId);
+                    txtHomeAreaId.SelectedIndex = areaIndex;
                 }
             }
             catch (Exception exception) { }
@@ -360,6 +455,21 @@ namespace QuanLyNha
                 var enumdata = (Status)e.Value;
                 e.Value = enumdata.GetType().GetMember(enumdata.ToString()).First().GetCustomAttribute<DisplayAttribute>()?.GetName();
             }
+            if (dgvHome.Columns[e.ColumnIndex].Name == "StatusHome")
+            {
+                var enumdata = (StatusHome)e.Value;
+                e.Value = enumdata.GetType().GetMember(enumdata.ToString()).First().GetCustomAttribute<DisplayAttribute>()?.GetName();
+            }
+            if (dgvHome.Columns[e.ColumnIndex].Name == "Direction")
+            {
+                var enumdata = (Direction)e.Value;
+                e.Value = enumdata.GetType().GetMember(enumdata.ToString()).First().GetCustomAttribute<DisplayAttribute>()?.GetName();
+            }
+            if (dgvHome.Columns[e.ColumnIndex].Name == "AreaId")
+            {
+                var id = (int)e.Value;
+                e.Value = _dbContext.Areas.FirstOrDefault(f => f.Id == id).Name;
+            }
         }
 
         private void dgvCustomer_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -395,12 +505,12 @@ namespace QuanLyNha
         private void dgvHome_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var data = (dgvHome.DataSource as List<Home>)[e.RowIndex];
-            if (dgvArea.Columns[e.ColumnIndex].Name == "btnDelete")
+            if (dgvHome.Columns[e.ColumnIndex].Name == "btnDelete")
             {
                 _dbContext.Homes.Remove(data);
                 _dbContext.SaveChanges();
                 MessageBox.Show("Xóa thành công nhà cho thuê!", "Thông báo", MessageBoxButtons.OK);
-                LoadArea();
+                LoadHome();
             }
         }
 
