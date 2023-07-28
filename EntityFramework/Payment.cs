@@ -12,6 +12,7 @@ namespace QuanLyNha.EntityFramework
     {
         public int Id { get; set; }
         public decimal Price { get; set; }
+        public DateTime CreationTime { get; set; }
         public int ContactId { get; set; }
         public Contract Contract { get; set; }
         public int AccountId { get; set; }

@@ -16,5 +16,40 @@ namespace QuanLyNha
         {
             InitializeComponent();
         }
+
+        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCreateContact_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeleteContact_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCreatePayment_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
