@@ -50,7 +50,6 @@ namespace QuanLyNha
             this.btnHomeUpdate = new System.Windows.Forms.Button();
             this.btnHomeAdd = new System.Windows.Forms.Button();
             this.txtHomeAreaId = new System.Windows.Forms.ComboBox();
-            this.txtHomeStatusHome = new System.Windows.Forms.ComboBox();
             this.txtHomeStatus = new System.Windows.Forms.ComboBox();
             this.txtHomeResidentialArea = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -58,7 +57,6 @@ namespace QuanLyNha
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.txtHomeName = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -274,7 +272,6 @@ namespace QuanLyNha
             this.tHome.Controls.Add(this.btnHomeUpdate);
             this.tHome.Controls.Add(this.btnHomeAdd);
             this.tHome.Controls.Add(this.txtHomeAreaId);
-            this.tHome.Controls.Add(this.txtHomeStatusHome);
             this.tHome.Controls.Add(this.txtHomeStatus);
             this.tHome.Controls.Add(this.txtHomeResidentialArea);
             this.tHome.Controls.Add(this.label25);
@@ -282,7 +279,6 @@ namespace QuanLyNha
             this.tHome.Controls.Add(this.label22);
             this.tHome.Controls.Add(this.label23);
             this.tHome.Controls.Add(this.label24);
-            this.tHome.Controls.Add(this.label17);
             this.tHome.Controls.Add(this.label18);
             this.tHome.Controls.Add(this.txtHomeName);
             this.tHome.Controls.Add(this.label19);
@@ -342,18 +338,10 @@ namespace QuanLyNha
             // txtHomeAreaId
             // 
             this.txtHomeAreaId.FormattingEnabled = true;
-            this.txtHomeAreaId.Location = new System.Drawing.Point(814, 130);
+            this.txtHomeAreaId.Location = new System.Drawing.Point(814, 80);
             this.txtHomeAreaId.Name = "txtHomeAreaId";
             this.txtHomeAreaId.Size = new System.Drawing.Size(184, 21);
             this.txtHomeAreaId.TabIndex = 63;
-            // 
-            // txtHomeStatusHome
-            // 
-            this.txtHomeStatusHome.FormattingEnabled = true;
-            this.txtHomeStatusHome.Location = new System.Drawing.Point(814, 80);
-            this.txtHomeStatusHome.Name = "txtHomeStatusHome";
-            this.txtHomeStatusHome.Size = new System.Drawing.Size(184, 21);
-            this.txtHomeStatusHome.TabIndex = 62;
             // 
             // txtHomeStatus
             // 
@@ -384,7 +372,7 @@ namespace QuanLyNha
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(731, 127);
+            this.label21.Location = new System.Drawing.Point(731, 77);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(57, 16);
             this.label21.TabIndex = 55;
@@ -419,16 +407,6 @@ namespace QuanLyNha
             this.label24.Size = new System.Drawing.Size(74, 16);
             this.label24.TabIndex = 50;
             this.label24.Text = "Số tần nhà:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(731, 80);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(70, 16);
-            this.label17.TabIndex = 47;
-            this.label17.Text = "Tình trạng:";
             // 
             // label18
             // 
@@ -908,7 +886,6 @@ namespace QuanLyNha
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtHomeName;
         private System.Windows.Forms.Label label19;
@@ -918,7 +895,6 @@ namespace QuanLyNha
         private System.Windows.Forms.Button btnHomeUpdate;
         private System.Windows.Forms.Button btnHomeAdd;
         private System.Windows.Forms.ComboBox txtHomeAreaId;
-        private System.Windows.Forms.ComboBox txtHomeStatusHome;
         private System.Windows.Forms.ComboBox txtHomeStatus;
         private System.Windows.Forms.TextBox txtHomeAddress;
         private System.Windows.Forms.Panel pCustomer;

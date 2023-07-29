@@ -23,7 +23,7 @@ namespace QuanLyNha
             LoadComboboxStatus(txtHomeStatus);
             LoadComboboxStatus(txtCustomerStatus);
             LoadComboboxStatus(txtAccountStatus);
-            LoadComboboxHomeStatus();
+            //LoadComboboxHomeStatus();
             LoadComboboxHomeDirection();
             LoadComboboxArea();
             LoadArea();
@@ -208,12 +208,12 @@ namespace QuanLyNha
             comboBox.DisplayMember = "Name";
             comboBox.ValueMember = "Id";
         }
-        private void LoadComboboxHomeStatus()
-        {
-            txtHomeStatusHome.DataSource = GetStatusHome();
-            txtHomeStatusHome.DisplayMember = "Name";
-            txtHomeStatusHome.ValueMember = "Id";
-        }
+        //private void LoadComboboxHomeStatus()
+        //{
+        //    txtHomeStatusHome.DataSource = GetStatusHome();
+        //    txtHomeStatusHome.DisplayMember = "Name";
+        //    txtHomeStatusHome.ValueMember = "Id";
+        //}
         private void LoadComboboxHomeDirection()
         {
             txtHomeDirection.DataSource = GetDirectionHome();
@@ -335,7 +335,7 @@ namespace QuanLyNha
             var storey = int.Parse(txtHomeStorey.Value.ToString());
             var address = txtHomeAddress.Text;
             var status = (Status)txtHomeStatus.SelectedValue;
-            var statusHome = (StatusHome)txtHomeStatusHome.SelectedValue;
+            var statusHome = StatusHome.DeActive;
             var areaId = (int)txtHomeAreaId.SelectedValue;
 
             _dbContext.Homes.Add(new Home() { Name = name, ResidentialArea = residentialArea, Direction = direction, Storey = storey, Address = address, Status = status, StatusHome = statusHome, AreaId = areaId });
@@ -353,7 +353,7 @@ namespace QuanLyNha
             var storey = int.Parse(txtHomeStorey.Value.ToString());
             var address = txtHomeAddress.Text;
             var status = (Status)txtHomeStatus.SelectedValue;
-            var statusHome = (StatusHome)txtHomeStatusHome.SelectedValue;
+            var statusHome = StatusHome.DeActive;
             var areaId = (int)txtHomeAreaId.SelectedValue;
 
             var homeModel = _dbContext.Homes.FirstOrDefault(f => f.Id == id);
@@ -394,10 +394,6 @@ namespace QuanLyNha
                     int id = (int)dgvHome.SelectedCells[0].OwningRow.Cells["Status"].Value;
                     var index = GetSatus().FindIndex(x => x.Id == id);
                     txtHomeStatus.SelectedIndex = index;
-
-                    var idHomeStatus = (int)dgvHome.SelectedCells[0].OwningRow.Cells["StatusHome"].Value;
-                    var indexHomeStatus = GetStatusHome().FindIndex(x => x.Id == idHomeStatus);
-                    txtHomeStatusHome.SelectedIndex = indexHomeStatus;
 
                     var idHomeDirection = (int)dgvHome.SelectedCells[0].OwningRow.Cells["Direction"].Value;
                     var indexHomeDirection = GetDirectionHome().FindIndex(x => x.Id == idHomeDirection);

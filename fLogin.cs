@@ -28,8 +28,8 @@ namespace QuanLyNha
             var account = _dbContext.Accounts.FirstOrDefault(f => f.UserName == txbUserName.Text && f.Password == txbPassWord.Text);
             Global.AccountId = account.Id;
             this.Hide();
-            var fmain = new fMain();
-            fmain.ShowDialog();
+            var fmanager = new fManager();
+            fmanager.ShowDialog();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
