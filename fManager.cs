@@ -318,7 +318,30 @@ namespace QuanLyNha
         {
             try
             {
+                var freport = new fReport();
+                var listReport = new List<Report>();
 
+                var list = _dbContext.Payments.Include("Account").ToList();
+                foreach (var item in list)
+                {
+                    var contract = _dbContext.Contracts.Include("Customer").Include("Home").FirstOrDefault(f => f.Id == item.ContactId);
+                    var dto = new Report()
+                    {
+                        Account = item.Account.DislayName,
+                        Area = contract.Home.Area.Name,
+                        Home = contract.Home.Name,
+                        Customer = contract.Customer.Name,
+                        Date = item.CreationTime.ToString("dd/MM/yyyy HH:mm"),
+                        Price = item.Price.ToString("c", culture)
+                    };
+                    listReport.Add(dto);
+                }
+                
+                CrystalReport report = new CrystalReport();
+                report.SetDataSource(listReport);
+
+                freport.crystalReportViewer.ReportSource = report;
+                freport.ShowDialog();
             }
             catch (Exception ex) { }
         }

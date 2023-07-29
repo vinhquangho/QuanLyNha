@@ -29,12 +29,34 @@ namespace QuanLyNha
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.crystalReportViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.SuspendLayout();
+            // 
+            // crystalReportViewer
+            // 
+            this.crystalReportViewer.ActiveViewIndex = -1;
+            this.crystalReportViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer.Location = new System.Drawing.Point(0, 0);
+            this.crystalReportViewer.Name = "crystalReportViewer";
+            this.crystalReportViewer.Size = new System.Drawing.Size(1031, 450);
+            this.crystalReportViewer.TabIndex = 0;
+            // 
+            // fReport
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1031, 450);
+            this.Controls.Add(this.crystalReportViewer);
+            this.Name = "fReport";
             this.Text = "fReport";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        public CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer;
     }
 }
